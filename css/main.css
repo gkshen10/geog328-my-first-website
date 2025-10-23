@@ -1,0 +1,129 @@
+/* Add a background video */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Add a fixed footer */
+.footer {
+  font-size: 18px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: right;
+}
+
+/* Style text under images */
+.imageText {
+  font-size: 16px;
+  font-family: 'Nunito Sans', 'Arial', sans-serif;
+}
+
+/* Style large text boxes */
+.textboxLarge {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Style small text boxes */
+.textboxSmall {
+  width: 30%;
+  margin: 0 auto;
+}
+
+/* Style images to be round */
+.roundImg {
+  border-radius: 50%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(66, 66, 66);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ab96bd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #774e8f;
+  color: white;
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 26px;
+  color: white;
+}
+
+/* Style for page centered content */
+.centered {
+  text-align: center;
+}
+
+/* When the screen is less than 800 pixels wide */
+@media screen and (max-width: 900px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+
+  /* Show the icon that should open and close the topnav */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon */
+/* the "responsive" class attribute will be added to the topnav by the JavaScript code */
+/* This media query sets the style for the unfolded topnav */
+/* It makes the topnav look good on small screens (display the links vertically instead of horizontally)  */
+@media screen and (max-width: 900px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
